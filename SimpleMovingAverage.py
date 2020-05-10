@@ -1,4 +1,5 @@
-
+import numpy as np
+randomseries=np.arange(0,2000,3)
 #funzione che restituisce media mobile di una serie
 def sma(numbers,days):
 	mm=[]
@@ -12,8 +13,7 @@ def sma(numbers,days):
 		mm.append(media)
 	return mm
 
-for x in range(100000):
-	a =sma([1,3,5,4,8,6,12,8,12,11,11,11],2)
+a =sma(randomseries,2)
 
 print (a)
 
