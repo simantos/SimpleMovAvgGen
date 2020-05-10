@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import random
 
@@ -7,6 +8,7 @@ for x in range(1,1000):
 	
 	
 randomseries=random_nbr_series
+period=50
 #funzione che restituisce media mobile di una serie
 def sma(numbers,days):
 	mm=[]
@@ -20,7 +22,10 @@ def sma(numbers,days):
 		mm.append(media)
 	return mm
 
-a =sma(randomseries,2)
+a =sma(randomseries,period)
 
-print (a)
+plt.figure()
+plt.plot(a[period:])
+plt.plot(random_nbr_series[period:])
+plt.show()
 
