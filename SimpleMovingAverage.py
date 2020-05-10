@@ -1,5 +1,10 @@
 import numpy as np
-randomseries=np.arange(0,2000,3)
+import random
+random_nbr_series=[]
+for x in range(1000):
+	random_nbr_series.append(random.randint(10,400))
+	
+randomseries=random_nbr_series
 #funzione che restituisce media mobile di una serie
 def sma(numbers,days):
 	mm=[]
