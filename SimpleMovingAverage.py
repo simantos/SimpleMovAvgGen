@@ -1,8 +1,10 @@
 import numpy as np
 import random
-random_nbr_series=[]
-for x in range(1000):
-	random_nbr_series.append(random.randint(10,400))
+
+random_nbr_series=[1]
+for x in range(1,1000):
+	random_nbr_series.append(random_nbr_series[-1]+random_nbr_series[-1]*random.randint(-4,4)/100)
+	
 	
 randomseries=random_nbr_series
 #funzione che restituisce media mobile di una serie
